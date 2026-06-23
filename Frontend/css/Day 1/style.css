@@ -1,0 +1,30 @@
+ body{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+ }
+ 
+
+ div{
+      background-color: red;
+      color: black;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      border: 2px solid blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+    }
+#ele1 {
+  background-color: blueviolet;
+}
+
+.divs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
