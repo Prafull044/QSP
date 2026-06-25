@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* main, section{
+    width: 200px;
+    height: 200px;
+    border: solid;
+}
+main{
+    background-color: antiquewhite;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+section{
+    background-color: aquamarine;
+    padding: 30px;
+    box-sizing: border-box;
+} */
+
+div {
+  width: 400px;
+  height: 200px;
+  border: 20px;
+  background-color: antiquewhite;
+  border: solid;
+  background-image: url(https://documents.iplt20.com/ipl/IPLHeadshot2026/2.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 200%;
+}

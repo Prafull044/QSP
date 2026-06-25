@@ -1,0 +1,388 @@
+h1 {
+  text-align: center;
+}
+
+section {
+  /* background-color: rgb(147, 145, 145); */
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.div,
+.box2 {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  background-color: rgb(168, 195, 238);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.box2:hover {
+  display: none;
+}
+.btnanchor {
+  display: flex;
+  justify-content: center;
+}
+
+.anchor {
+  background-color: rgb(114, 89, 138);
+  padding: 10px 40px;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.anchor:hover {
+  background-color: rgb(140, 122, 156);
+}
+/*//! task 2 */
+.task2 {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  /* background-color: azure; */
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  /* margin-top: 100px; */
+}
+.task2img img {
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+#task3 {
+  margin-top: 100px;
+}
+.task3div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  text-align: center;
+}
+.task3nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: rgb(127, 125, 125);
+  gap: 130px;
+}
+.task3nav p:hover {
+  background-color: rgb(158, 153, 153);
+  padding: 10px;
+  border-radius: 15px;
+}
+.task3p {
+  margin-right: 50px;
+}
+.task4div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 85vh;
+}
+.task4btn {
+  background-color: rgb(119, 181, 130);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+.task5 {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.task5div {
+  display: flex;
+  justify-content: end;
+  gap: 100px;
+  background-color: rgb(189, 184, 193);
+}
+.task5a {
+  text-decoration: none;
+  color: brown;
+}
+
+.task6 {
+  display: flex;
+  /* flex-direction: column; */
+  height: 85vh;
+  /* background-color: azure; */
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  /* margin-top: 100px; */
+}
+.task6img img {
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+}
+.task7 {
+  height: 85vh;
+}
+
+.task7d {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+
+  align-items: center;
+}
+.task7p {
+  height: 250px;
+  width: 250px;
+  background-color: rgb(159, 213, 195);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task7p:hover {
+  background-color: rgb(74, 165, 165);
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.task8 {
+  height: 100vh;
+}
+.task8d {
+  display: flex;
+  height: 85%;
+  justify-content: space-around;
+  align-items: center;
+}
+.task8p {
+  height: 250px;
+  width: 250px;
+  border-radius: 20px;
+
+  background-color: rgb(223, 234, 234);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task9 {
+  height: 100vh;
+}
+.task9d {
+  display: flex;
+  height: 85%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.task9p {
+  height: 250px;
+  width: 250px;
+  border-radius: 20px;
+
+  background-color: rgb(187, 159, 179);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task9p:hover {
+  background-color: rgb(221, 148, 200);
+  font-size: x-large;
+}
+.task10 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Email,
+.Password {
+  border: 1px solid black;
+  padding: 10px 34px;
+}
+.task10btn {
+  padding: 10px 30px;
+  background-color: rgb(195, 133, 133);
+}
+.task11 {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task11d {
+  display: flex;
+  height: 200px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: rgb(199, 199, 247);
+  border-radius: 40px;
+}
+
+.task12 {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  /* background-color: azure; */
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  /* margin-top: 100px; */
+}
+.task12img img {
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.task13 {
+  height: 100vh;
+}
+.task13d {
+  display: flex;
+  height: 85%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.task13p {
+  height: 250px;
+  width: 250px;
+  border-radius: 20px;
+
+  background-color: rgb(196, 232, 212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+.task13p:hover {
+  background-color: rgb(221, 148, 200);
+  font-size: x-large;
+}
+.task14aside {
+  width: 10vw;
+  background-color: rgb(220, 172, 172);
+  height: 75vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+.task15d {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+.task15p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(193, 185, 180);
+  align-items: center;
+  border-radius: 30px;
+}
+.task16p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(176, 198, 147);
+  align-items: center;
+  border-radius: 30px;
+}
+.task17 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.chat-container {
+  width: 350px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(60, 59, 59);
+  border-radius: 10px;
+}
+
+.chat-header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.message {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.message.received {
+  background-color: #e9ecef;
+  color: #333333;
+  align-self: flex-start;
+}
+.message.sent {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+}
+.task18d {
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.task20d{
+height: 85vh;
+display: flex;
+justify-content: space-around;
+
+}
+.task20p{
+  width: 300px;
+  height: 300px;
+  background-color: rgb(225, 190, 190);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+border-radius: 20px;
+}
+.task20p:hover{
+  background-color: rgb(137, 160, 160);
+  font-size: xx-large;
+}
