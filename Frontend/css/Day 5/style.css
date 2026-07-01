@@ -1,0 +1,52 @@
+#box{
+    background-color:blueviolet;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 450px;
+    left: 500px;
+}
+
+#box2{
+      background-color:rgb(227, 50, 109);
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 490px;
+    left: 550px; 
+} 
+#box3{
+      background-color:rgb(54, 9, 255);
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 530px;
+    left: 660px; 
+} 
+
+#box4{
+    background-color:blueviolet;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 450px;
+    right: 500px;
+}
+
+#box5{
+      background-color:rgb(227, 50, 109);
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 490px;
+    right: 550px; 
+} 
+
+section{
+    height: 100vh;
+    border: solid;
+}
+main{
+    border: 10px solid;
+    height: 50vh;
+}
