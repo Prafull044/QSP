@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- https://a10.gaanacdn.com/gn_img/artists/zLp36PvbrG/Lp36AR0KrG/size_l_1716815534.webp -->
+    <nav class="h-[7vh] bg-black flex items-center justify-between">
+      <section class="logosp text-white text-4xl p-[10px]">
+        <i class="fa-brands fa-spotify"></i>
+      </section>
+
+      <section
+        class="disableN flex text-white relative gap-[20px] left-[200px] items-center"
+      >
+        <article
+          class="text-white bg-[#2a2a2a] text-2xl flex justify-center items-center rounded-full w-[50px] h-[50px] hover:bg-gray-600"
+        >
+          <i class="fa-solid fa-house"></i>
+        </article>
+
+        <article
+          class="flex bg-[#2a2a2a] h-[6vh] w-[20vw] rounded-[50px] justify-between px-[20px] items-center hover:bg-gray-600"
+        >
+          <div><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div>
+            <input
+              type="text"
+              class="w-[14vw] outline-none border-r-[1px] border-r-white"
+              placeholder="What do you want to play?"
+            />
+          </div>
+          <div><i class="fa-regular fa-window-maximize"></i></div>
+        </article>
+
+      </section>
+
+      <section class=" text-white flex items-center gap-[20px]">
+        <article
+          class="disableN flex items-center gap-[20px] border-r-[1px] border-r-white pr-[20px]"
+        >
+          <div>Premium</div>
+          <div>Support</div>
+          <div>Download</div>
+        </article>
+        <article class="flex items-center gap-[20px]">
+          <div class="disableN "><i class="fa-regular fa-circle-down"></i> Install App</div>
+          <div>Sign up</div>
+          <div>
+            <button
+              class="btnLogin bg-white text-black rounded-full w-[130px] font-bold h-[6vh]"
+            >
+              Log in
+            </button>
+          </div>
+        </article>
+      </section>
+    </nav>
+
+    <main class="flex justify-around h-[85vh] bg-black items-center ">
+      <aside class="w-[22%] h-[84vh] rounded-[20px] bg-[#1a1818] text-white">
+
+        <section class="sectionaside text-white flex justify-between text-center mt-[20px] h-[10vh] font-bold ">
+            <p class="pl-[10px]">Your Library</p>
+            <p class="pr-[10px]   w-[90px] h-[40px] rounded-4xl items-center flex justify-center bg-[#515050]"><button><i class="fa-solid fa-plus"></i> Create</button></p>
+        </section>
+
+        <div class="boxleft1 w-[90%] bg-[#515050]  h-[133px] mt-[10px] ml-[18px] rounded-2xl "  >
+         <p class="pl-[15px] font-bold">Create your First Playlist</p>
+         <p class="pl-[15px]">Its easy, We'll help you </p><br>
+         <p class="pl-[15px]">
+         <button class="btnbox bg-white rounded-3xl text-black  w-[170px] h-[30px] pl-[15px] ">Create your Playlist</button>
+         </p>
+     </div>
+
+    <div class="boxleft2 w-[90%]  bg-[#515050] h-[133px] mt-[20px] ml-[18px] rounded-2xl ">
+         <p class="font-bold pl-[15px]">Lets find some podcasts to follow </p>
+         <p class="pl-[15px]" >we'll keep you updated on new episodes</p><br>
+         <p class="pl-[15px]">
+         <button class="btnbox1 bg-white rounded-3xl text-black w-[150px] h-[30px] pl-[15px]">Browse Podcasts</button>
+         </p>
+     </div>
+      </aside>
+
+<section
+        class="maindata h-[84vh] w-[76%] bg-[#1a1818] rounded-[10px] flex flex-col gap-[30px] overflow-y-auto scrollbar-none "
+      >
+        <div class="h-[40vh] text-white p-[20px]  " >
+          <div class="flex items-center justify-between">
+            <p class="text-2xl font-bold relative left-[15px]">
+              Trending songs
+            </p>
+            <p>show all</p>
+          </div>
+          <div class="flex justify-around p-[10px] gap-[15px] overflow-x-scroll ">
+            <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/p2.png" alt="" />
+              <p class="font-medium">Zigane</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+            <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/p3.png" alt="" />
+              <p class="font-medium">Kath Lagda</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+            <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/p4.png" alt="" />
+              <p class="font-medium">Criminal</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+            <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/p5.png" alt="" />
+              <p class="font-medium">Tera Mera Rishta</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+
+              <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/p8 (1).png" alt="" />
+              <p class="font-medium">Kath Lagda</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+           
+            <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/p8 (3).png" alt="" />
+              <p class="font-medium">Tera Mera Rishta</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+        <div class="h-[40vh] text-white p-[20px]">
+          <div class="Smallbox flex items-center justify-between">
+            <p class="text-2xl font-bold relative left-[15px]">
+              New songs
+            </p>
+            <p>show all</p>
+          </div>
+          <div class="flex justify-around p-[10px] gap-[15px] overflow-x-hidden overflow-x-scroll">
+            <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/p6.png" alt="" />
+              <p class="font-medium">Bairan - Duet Version</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+            <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/p7.png" alt="" />
+              <p class="font-medium">One Frame</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+            <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/p2.png" alt="" />
+              <p class="font-medium">Zigane</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+            <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/image.png" alt="" />
+              <p class="font-medium">Finding Her</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+
+              <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/p3.png" alt="" />
+              <p class="font-medium">Kath Lagda</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+
+
+              <div class="Smallbox flex flex-col gap-[5px]">
+              <img class="h-[200px]" src="./assets/p4.png" alt="" />
+              <p class="font-medium">Criminal</p>
+              <p class="text-[#919191]">
+                Simiran Kaur Dhadli, <br />
+                Banjaare
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+      
+    </main>
+
+    <footer class="flex justify-between p-[10px] h-[5vh]">
+      <p class="w-[65%]">
+        We and our partners use cookies to personalize your experience, to show
+        you ads based on your interests, and for measurement and analytics
+        purposes. By using our website and services, you agree to our use of
+        cookies as described in our Cookie Policy.
+      </p>
+      <p>
+        <i class="fa-solid fa-xmark"></i>
+      </p>
+    </footer>
+  </body>
+</html>

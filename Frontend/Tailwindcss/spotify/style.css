@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/* Hide scrollbar while keeping scroll functionality */
+.overflow-x-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.overflow-x-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* *{
+    font-family: "Geist Pixel", sans-serif;
+} */
+
+@media (max-width: 600px) {
+  aside {
+    display: none;
+  }
+  nav {
+    height: 55px;
+  }
+
+  .maindata {
+    width: 99%;
+    margin-left: 10px;
+  }
+  .Smallbox {
+    min-width: 50%;
+  }
+  .logosp {
+    padding-left: 10px;
+  }
+
+  .disableN {
+    display: none;
+  }
+  .btnLogin {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    height: 5vh;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .logosp {
+    padding-left: 10px;
+  }
+
+  .disableN {
+    display: none;
+  }
+  .btnLogin {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  aside {
+    width: 35%;
+  }
+  .sectionaside {
+    font-weight: 200;
+  }
+  .boxleft1 {
+    margin-right: 50px;
+    margin-right: 100px;
+    display: flex;
+    /* padding-top: 40px; */
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  /* .btnbox {
+    margin-top: 65px;
+    font-size: medium;
+    padding: 0px 0px;
+    margin-right: 38px;
+    margin-left: 0px;
+  /* }  */
+
+  .btnbox1 {
+    font-size: medium;
+    margin-bottom: 14px;
+  }
+
+  .boxleft2 {
+    margin-top: 80px;
+    height: auto;
+  }
+
+  .maindata {
+    width: 99%;
+    margin-left: 10px;
+  }
+  .Smallbox {
+    min-width: 50%;
+  }
+  .logosp {
+    padding-left: 10px;
+  }
+}
+
+/* Small Laptop */
+@media (min-width: 769px) and (max-width: 992px) {
+  .disableN {
+    display: none;
+  }
+  .maindata {
+    width: 99%;
+    margin-left: 10px;
+  }
+  .Smallbox {
+    min-width: 30%;
+  }
+  .logosp {
+    padding-left: 10px;
+  }
+  aside {
+    width: 35%;
+  }
+  .boxleft2 {
+    margin-top: 80px;
+    height: auto;
+  }
+
+  .btnbox1 {
+    font-size: medium;
+    margin-bottom: 14px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 993px) and (max-width: 1286px) {
+  .disableN {
+    display: none;
+  }
+
+  .maindata {
+    width: 99%;
+    margin-left: 10px;
+  }
+  .Smallbox {
+    min-width: 25%;
+  }
+  .logosp {
+    padding-left: 10px;
+  }
+  aside {
+    width: 35%;
+  }
+  .boxleft2 {
+    margin-top: 80px;
+    height: auto;
+  }
+
+  .btnbox1 {
+    font-size: medium;
+    margin-bottom: 14px;
+  }
+}
+
