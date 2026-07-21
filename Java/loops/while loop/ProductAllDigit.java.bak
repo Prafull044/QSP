@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class ProductAllDigit
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		
+		int num = sc.nextInt();
+		int product = 0;
+		
+		while(num != 0)
+		{
+			int last = num % 10;
+		
+			System.out.println(last); 
+			product = product * last ;
+			num /= 10;
+		}
+		System.out.println(product);
+			
+		}
+	}
+

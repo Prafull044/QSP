@@ -1,0 +1,14 @@
+class PrintHii 
+{
+	public static void main(String[] args) 
+	{
+		int hi = 0;
+		do{
+			System.out.print("Hi") ;
+				hi++;
+		  }
+			while(hi < 5);
+	}
+}
+
+

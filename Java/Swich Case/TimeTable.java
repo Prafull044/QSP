@@ -1,0 +1,53 @@
+import java.util.Scanner;
+class TimeTable 
+{
+	public static void main(String[] args) 
+	{
+		
+	Scanner sc = new Scanner(System.in);
+	
+	System.out.println("Enter a day");
+	String day = sc.next();
+	
+		switch (day){
+			
+			case "Monday" :
+			{
+				System.out.println("Java Basic & OOPs");
+			}
+			break ;
+			case "Tuesday":
+			{
+				System.out.println("Advanced Java");
+			}
+			break;
+			case "Wednesday" :
+			{
+				System.out.println("Spring Boot") ;
+			}
+			break;
+			case "Thursday":
+			{
+				System.out.println("HTML & CSS") ;
+			}
+			case "friday":
+			{
+				System.out.println("Spring Boot and REST APIs") ;
+			}
+			case "Saturday":
+			{
+				System.out.println("DSA") ;
+			}
+			case "Sunday":
+			{
+				System.out.println("Revision of the Week") ;
+			}
+			default :
+			{
+				System.out.println("You Enter Wrong Input");
+			}
+	}
+}
+
+}
+		

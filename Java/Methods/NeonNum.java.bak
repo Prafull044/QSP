@@ -1,0 +1,37 @@
+class  NeonNum
+{
+	public static void main(String[] args) 
+	{
+		for(int i = 1; i<= 7; i++)
+		{
+			if (isNeon(i))
+			{
+				System.out.println(i);
+			}
+		}
+		
+	}
+	
+	
+	public static boolean isNeon(int num)
+	{
+		int sqr = num * num ;
+		int sum = 0;
+		
+	    while (sqr > 0)
+	    {
+			int digit = sqr % 10;
+			 sum = sum + digit;
+			 sqr /= 10;
+	    }
+		
+		if (sum == num)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}
