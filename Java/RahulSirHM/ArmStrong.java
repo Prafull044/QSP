@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+class ArmStrong
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a Number");
+        int num = sc.nextInt();
+
+        int temp = num;
+        int temp2 = num;
+        int count = 0;
+
+        while (temp > 0)
+        {
+            temp /= 10;
+            count++;
+        }
+
+        int sum = 0;
+
+        while (temp2 > 0)
+        {
+            int last = temp2 % 10;
+
+            int pr = 1;
+
+            for (int i = 1; i <= count; i++)
+            {
+                pr = pr * last;    
+            }
+
+            sum = sum + pr;
+            temp2 /= 10;
+        }
+
+        if (sum == num)
+        {
+            System.out.println(num + " is an Armstrong Number");
+        }
+        else
+        {
+            System.out.println(num + " is not an Armstrong Number");
+        }
+    }
+}

@@ -1,0 +1,34 @@
+import java.util.Scanner;
+class CoPrime
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter a Number");
+		int num = sc.nextInt();
+		
+		System.out.println("Enter a Number");
+		int num2 = sc.nextInt();
+		
+		int small = num < num2? num : num2;
+		 
+		while(true)
+		 {
+			 if (num % small == 0 && num2 % small == 0  )
+			 {
+				 break;
+			 }
+			 small--;
+		 }
+		 
+		 if (small == 1)
+		 {
+			 System.out.println("The Number is CO- Prime Number");
+		 }
+		 else
+			 {
+				System.out.println("The Number is Not Co-Prime Number");
+			 }
+	}
+}

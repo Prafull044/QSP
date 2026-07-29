@@ -1,0 +1,48 @@
+import java.util.Scanner;
+class BouncyNum
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		
+		int num = sc.nextInt();
+		
+		boolean inc = false;
+		boolean dec = false;
+		
+		int last = num % 10;
+		int secLast ;
+		
+		while (num > 9)
+		{
+			num /= 10;
+			secLast = num % 10;
+			
+		    if (secLast > last)
+		    {
+				inc = true;
+		    }
+			else if (secLast < last)
+			{
+			    dec = true;	
+			}
+			
+			if (inc && dec)
+			{
+				break;
+			}
+			
+			last = secLast;
+		}
+		
+		if (inc && dec)
+		{
+			System.out.println("Bouncy Number");
+		}
+		else
+		{
+			System.out.println(" Not a Bouncy Number");
+		}
+	}
+}
