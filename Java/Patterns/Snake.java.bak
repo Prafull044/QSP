@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class Snake 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter a rows");
+		int n = sc.nextInt();
+		
+		System.out.println("Enter the Num Where you want to start Snake!");
+		int num = sc.nextInt();
+		
+		int a = num;
+		
+		for (int i = 1; i<= n ; i++ )
+		{
+			for (int j = 1;j<= n ;j++ )
+			{
+				if (i%2 != 0)
+				{
+					System.out.print(a++ +" ");
+					if(num<10)System.out.print(" ");
+				}
+				else
+				{
+					System.out.print(a-- +" ");
+					if(num<=9)System.out.print(" ");
+					
+				}
+			}
+			
+			
+			a = (i%2 != 0)? a+(n-1):a+n+1; 
+			System.out.println();
+		}
+		
+		
+	}
+}
