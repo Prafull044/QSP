@@ -1,0 +1,74 @@
+import java.util.Scanner;
+class StonePaperScissor 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		    outerLoop:
+			while (true)
+			{
+			System.out.println(" \n WELCOME \n");
+			
+			System.out.println("1. STONE\n2. PAPER\n3. SCISSOR");
+		
+		     System.out.println("Enter your option");
+			 int userOption = sc.nextInt();
+			 String userResp = "";
+			 
+			 switch (userOption)
+			 {
+			 case 1-> userResp = "STONE";
+			 case 2-> userResp = "PAPER";
+			 case 3-> userResp = "SCISSOR";
+			 default -> {System.out.println("\n INVALID RESPONSE ");
+			  continue outerLoop;}
+			 }
+			 
+			 // BOT RESPONSE
+			 int botOption = 0;
+			 while (true)
+			 {
+				 botOption = (int)(Math.random() * 10);
+				 if(botOption >= 1  && botOption <= 3) break;
+			 }
+			 
+			 String botResp = "";
+			 
+			 switch (botOption)
+			 {
+			 case 1 -> botResp = "STONE";
+			 case 2 -> botResp = "PAPER";
+			 case 3 -> botResp = "SCISSOR";
+			 }
+			 
+			 System.out.println("\n BOT          USER");
+			 System.out.println("   "+ botResp+ " "+ userResp);
+			 
+			 // WINNER
+			 if((userResp.equals("STONE")  && botResp.equals("SCISSOR")) ||
+				(userResp.equals("PAPER")  && botResp.equals("STONE")) ||
+				(userResp.equals("SCISSOR")  && botResp.equals("PAPER"))
+			 ){
+				System.out.println("\n     USER WON  \n");
+			 }
+			else if((userResp.equals("STONE")  && botResp.equals("PAPER")) ||
+				(userResp.equals("PAPER")  && botResp.equals("SCISSOR")) ||
+				(userResp.equals("SCISSOR")  && botResp.equals("STONE")) )
+				{
+				System.out.println("\n    BOT WON  \n");
+			 }
+			 else{
+				System.out.println("\n        IT`S A DROW  \n");
+			 }
+			
+		System.out.println("Do you want play another round (Y/N):" );
+		char ch = sc.next().toUpperCase().charAt(0);
+			if (ch == 'N')
+			{
+				break outerLoop;
+			}
+			
+			}
+	}
+}

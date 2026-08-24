@@ -4,8 +4,6 @@ class Num58{
 		int n = 4;
 		int a = 1;
 		
-	
-		
 		for (int i= 1 ;i<= n ;i++ )
 		{
 		   a = i;
@@ -24,3 +22,4 @@ class Num58{
 		}
 	}
 }
+	

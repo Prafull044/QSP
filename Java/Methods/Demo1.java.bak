@@ -1,0 +1,55 @@
+class Demo1 {
+
+    static String str = "static variable";
+
+    String str2 = "Non static variable";
+
+    // Static block
+    static {
+        System.out.println("From static block");
+    }
+
+    // Non-static block
+    {
+        System.out.println("From non static");
+    }
+
+    // Static method of outer class
+    public static void m1() {
+        System.out.println("From m1 outer class");
+
+        Demo1 obj = new Demo1();
+        InnerClass obj2 = obj.new InnerClass();
+
+        obj2.m2();
+    }
+
+    // Non-static inner class
+    static class InnerClass {
+
+        public void m2() {
+            System.out.println("From non static m2 Inner class");
+        }
+
+        // This is NOT allowed in a normal non-static inner class
+        
+        public static void m3() {
+            System.out.println("From static m3 Inner class");
+        }
+       
+    }
+
+    public static void main(String[] args) {
+
+        m1();
+		
+		InnerClass ob1 = new InnerClass();
+		ob1.m3();
+
+        System.out.println(str);
+
+        Demo1 obj1 = new Demo1();
+
+        System.out.println(obj1.str2);
+    }
+}

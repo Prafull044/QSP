@@ -1,0 +1,26 @@
+class PowerOfNumber 
+{
+	static int baseNum;
+	static int raiseNum;
+	public static void main(String[] args) 
+	{
+		System.out.print("Enter a base Number : ");
+		baseNum = new Scanner(System.in).nextInt(); 
+		System.out.print("Enter a raise Number : ");
+		raiseNum = new Scanner(System.in).nextInt(); 
+		System.out.println("Power of Number is: "+ getPower());
+    }
+	
+	public static long getPower()
+	{ 
+		long pow = 1;
+		for (int i = 1; i<= raiseNum ; i++ )
+		{
+			pow = pow * baseNum;
+		}
+		return pow;
+	}
+	
+	
+}
+

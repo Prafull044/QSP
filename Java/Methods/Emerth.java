@@ -1,0 +1,60 @@
+import java.util.Scanner;
+class Emerth
+{
+	static int num ;
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a number :");
+		num = sc.nextInt();
+		emerthcheck();
+	}
+	
+	public static void emerthcheck()
+		{
+		    if (num <= 1)
+		    {
+				System.out.println("It is not a Emerth Number");
+				return;
+		    }
+				
+			for (int i = 2; i <= num/2 ; i++)
+			{
+				if (num % i == 0)
+				{
+					System.out.println("It is not a Emerth Number");
+					return;
+				}
+			}
+			isEmerth();
+			
+		}
+			
+			
+		public static void isEmerth(){
+			int rev = 0;
+			int temp = num;
+			while (temp != 0)
+			{
+				rev = rev * 10 + (temp % 10);
+				temp /= 10;
+			}
+			
+			for (int i = 2; i <= rev/2 ; i++)
+			{
+				if (rev % i == 0)
+				{
+					System.out.println("It is not a Emerth Number");
+					return;
+				}
+			}
+			
+			if (num == rev)
+			{
+				System.out.println(" not a Emerth Number");
+			}else
+			{
+			System.out.println("Emerth Number");
+			}
+		}	
+}

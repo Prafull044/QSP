@@ -1,0 +1,28 @@
+ // a 1 2 3
+ // b c 4 5
+ // d e f 6
+ // g h i j
+class P39
+{
+	public static void main(String[] args) 
+	{
+		int n = 4;
+		int num = 1;
+		char ch = 'a';
+		for (int i = 1;i<=n ;i++ )
+		{
+			for (int j =1;j<=n ;j++ )
+			{
+				if (j>i)
+				{
+					System.out.print(num++ +" ");
+				}
+				else
+				{
+					System.out.print(ch++ +" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+}

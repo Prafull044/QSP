@@ -1,9 +1,9 @@
-class num55
+class Num55
 {
 	public static void main(String[] args) 
 	{
 		int n = 4;
-		int a = 1-1 + ((n*n)/2);
+		int a = ((n*n)/2);
 		
 		char b = 'a';
 		

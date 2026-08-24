@@ -1,9 +1,13 @@
+ // 8 a 7 b
+ // 6 c 5 d
+ // 4 e 3 f
+ // 2 g 1 h
 class Num55
 {
 	public static void main(String[] args) 
 	{
 		int n = 4;
-		int a = 1-1 + ((n*n)/2);
+		int a = ((n*n)/2);
 		
 		char b = 'a';
 		
