@@ -1,0 +1,42 @@
+class  PrintOnlyPrimeDigit
+{
+	public static void main(String[] args) 
+	{
+		int num = 123456789;
+		isPrintDigit(num);
+		
+	}
+	
+	public static void isPrintDigit(int num)
+	{
+		while (num != 0)
+		{
+			int last = num%10;
+			
+			if (isPrime(last))
+			{
+				System.out.println(last);
+			}
+	
+	        num /= 10;
+		}
+	}
+	
+	public static boolean isPrime(int num)
+	{
+		if (num = 1)
+		{
+			return false;
+		}
+		else{
+			for (int i= 2;i< num ;i++ )
+			{
+				if (num%i == 0)
+				{
+					return false;
+				}
+			}
+			return true;
+		}
+	}
+}

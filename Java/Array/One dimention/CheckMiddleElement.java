@@ -1,0 +1,26 @@
+// WAP to check whether array element has middle element or no
+class  CheckMiddleElement
+{
+	public static void main(String[] args) 
+	{
+		int [] a = {10,20,30};
+		checkMidle(a);
+		
+		int [] arr = {10,20,30,40};
+		checkMidle(arr);
+	}
+	
+	public static void checkMidle(int num [])
+	{
+	   if (num.length % 2 != 0)
+	   {
+		   System.out.println("Midle number is Available");
+	   }
+	   else
+		{
+			System.out.println("Midle number is not Available");
+		}
+	   
+	}
+	
+}

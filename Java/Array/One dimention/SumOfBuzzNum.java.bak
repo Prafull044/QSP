@@ -1,0 +1,21 @@
+class SumOfBuzzNum 
+{
+	public static void main(String[] args) 
+	{
+		int [] arr = {47,7,14,8,9,10};
+		System.out.println("Sum of bzz num is "+ sumOfBuzz(arr));
+	}
+	
+	public static int sumOfBuzz(int [] num)
+	{
+		int sum = 0;
+		for (int i = 0;i<num.length ;i++ )
+		{
+			if (num[i] % 7 == 0 ||  num[i] % 10 == 7)
+			{
+				sum= sum + num[i];
+			}
+		}
+		return sum;
+	}
+}

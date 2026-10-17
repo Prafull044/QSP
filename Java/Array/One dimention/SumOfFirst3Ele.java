@@ -1,0 +1,34 @@
+// 5.WAP to print sum of first 3 elements`
+// WAP to print sum of last 3 elements
+
+class  SumOfFirst3Ele
+{
+	public static void main(String[] args) 
+	{
+		int [] arr = {10,20,30,40,50};
+		System.out.println("Sum of 1st 3 Ele " +  SumArray(arr));
+		
+		System.out.println("Sum of last 3 Ele  " +  SumLastArray(arr));
+	}
+	
+	public static int SumArray(int num[])
+	{
+		int sum = 0;
+		for (int i = 0;i< 3 ;i++ )
+		{
+		sum += num[i];
+	    }
+		
+		return sum ;
+	}
+	
+	public static int SumLastArray(int num[])
+	{
+		int sum = 0;
+		for (int i = (num.length-3); i < num.length ;i++ )
+		{
+		sum += num[i];
+		}
+		return sum;
+	}
+}

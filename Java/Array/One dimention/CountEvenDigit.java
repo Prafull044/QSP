@@ -1,0 +1,23 @@
+// 34)WAP to count even digit in an given array
+
+class  CountEvenDigit
+{
+	public static void main(String[] args) 
+	{
+		int [] arr = {5, 12, 7, 145, 99, 3, 456};
+          Num(arr);
+    }
+	
+	public static void Num(int num[] )
+	{    
+		int count = 0;
+		for (int i = 0;i< num.length ;i++ )
+		{
+			if (num[i] % 2 == 0)
+			{
+				count++;
+			}
+		}		    
+		System.out.println(count);
+	}
+}

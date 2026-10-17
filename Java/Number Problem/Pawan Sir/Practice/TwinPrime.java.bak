@@ -1,0 +1,46 @@
+class TwinPrime 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println(isTwin(11,13));
+	}
+	
+	public static boolean isTwin(int n1, int n2)
+	{
+		if (n1-n2 == -2 || n1-n2 == 2)
+		{
+			if (isPrime(n1))
+			{
+				if (isPrime(n2))
+				{
+					return true;
+				}else{
+					return false;
+				}
+			}else{
+				return false;
+			}
+		}else{
+			return false;
+		}
+	}
+	
+	public static boolean isPrime(int num)
+	{
+		if (num == 1)
+		{
+			return false;
+		}
+		else
+		{
+			for (int i = 2;i< num ;i++ )
+			{
+				if (num%i == 0)
+				{
+					return false;
+				}
+			}
+			return true;
+		}
+	}
+}

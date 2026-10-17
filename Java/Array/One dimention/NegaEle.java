@@ -1,0 +1,21 @@
+// 22)WAP to print only -ve elements in an given array
+
+class  NegaEle
+{
+	public static void main(String[] args) 
+	{
+		int [] arr = {-10, 20, -30, 40, 50, -60};
+          NegaEle(arr);
+    }
+	
+	public static void NegaEle(int num[] )
+	{   
+		for (int i = 0;i< num.length ;i++ )
+		{
+			if (num[i] < 0)
+			{
+				System.out.println(num[i]);
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+class XylumNum
+{
+	public static void main(String[] args) 
+	{
+		if (isXylum(2145))
+		{
+			System.out.println("Xylem Number");
+		}else{
+			System.out.println("Phloem Number");
+		
+	}
+	}
+	public static boolean isXylum(int num)
+	{
+		int endsum = 0;
+		int midsum = 0;
+		endsum = num % 10;
+		num /= 10;
+		while (num>9)
+		{
+			midsum += num % 10;
+			num /= 10;
+		}
+		endsum += num;
+		
+		return midsum == endsum;
+	}
+}

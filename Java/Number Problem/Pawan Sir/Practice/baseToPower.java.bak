@@ -1,0 +1,17 @@
+class  baseToPower
+{
+	public static void main(String[] args) 
+	{
+		System.out.println(ispower(2,2));
+	}
+	
+	public static int ispower(int base , int power)
+	{
+		int pow = 1;
+		for (int i = 1;i<= power ;i++ )
+		{
+			pow = pow * base;
+		}
+		return pow;
+	}
+}

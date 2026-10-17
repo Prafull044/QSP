@@ -1,0 +1,32 @@
+class AutomorphicNum 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println(isAutomorphic(25);
+	}
+	
+	public static boolean isAutomorphic(int num)
+	{
+		int ct = count(num);
+		return num == ((num * num) % ct);
+	}
+	
+	public static int count(int num)
+	{
+		int count = 0;
+		while (num != 0)
+		{
+			count++ ;
+			num /= 10;
+		}
+		
+		int ct = 1;
+
+
+       for (int i = 1; i <= count; i++)
+    {
+        ct *= 10;
+    }
+		return ct;
+	}
+}

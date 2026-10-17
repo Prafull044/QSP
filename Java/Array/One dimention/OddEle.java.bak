@@ -1,0 +1,22 @@
+// 20)print odd elements
+
+class OddEle
+{
+	public static void main(String[] args) 
+	{
+		int[] a = {10, 20, 30, 40, 50};
+		OddElement(a);
+    }
+	
+	public static void OddElement(int num[])
+	{
+		for (int i = 0;i< num.length ; i++)
+		{
+			if (i % 2 !=0)
+			{
+				System.out.println(num[i]);
+			}
+		}
+	}
+}
+	
