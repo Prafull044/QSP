@@ -1,0 +1,23 @@
+// 29.WAP to print first uppercase in char[]
+
+class FirstUppercase
+{
+	public static void main(String[] args) 
+	{
+		char[] ch = {'#', '7', 'm', 'P', 'a'};
+
+		System.out.println(firstVowel(ch));
+	}
+	
+	public static char firstVowel(char ch [])
+	{
+		for (int i = 0;i< ch.length ;i++ )
+		{
+			if (ch[i]>= 'A' && ch[i] <= 'Z')
+			{
+				return ch[i];
+			}
+		}
+		return '\0';
+	}
+}

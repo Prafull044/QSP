@@ -3,8 +3,8 @@ class  SumOfPositive
 {
 	public static void main(String[] args) 
 	{
-		int [] arr = {-10, 20, -30, 40, 50}
-		System.out.println("Sum of Positive elements"+ sumOfPosi(arr));
+		int [] arr = {-10, 20, -30, 40, 50};
+		System.out.println("Sum of Positive elements "+ sumOfPosi(arr));
     }
 	
 	public static int sumOfPosi(int num[] )
@@ -19,8 +19,5 @@ class  SumOfPositive
 		}
 		return sum;
 	}
-	
-	
-	
 	
 }

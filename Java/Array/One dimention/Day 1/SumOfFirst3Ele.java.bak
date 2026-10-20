@@ -1,3 +1,6 @@
+// 5.WAP to print sum of first 3 elements`
+// WAP to print sum of last 3 elements
+
 class  SumOfFirst3Ele
 {
 	public static void main(String[] args) 
@@ -22,7 +25,7 @@ class  SumOfFirst3Ele
 	public static int SumLastArray(int num[])
 	{
 		int sum = 0;
-		for (int i = (num.length-3); i < num.length ;i++ )
+		for (int i = num.length; i >= num.length-2 ;i-- )
 		{
 		sum += num[i];
 		}

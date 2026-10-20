@@ -13,7 +13,7 @@ class producOfOddEle
 		
 		for (int i =0;i<num.length ; i++ )
 		{
-			if (i % 2 != 0)
+			if (num[i] % 2 != 0)
 			{
 				prod *= num[i];
 			}

@@ -1,0 +1,26 @@
+// 33.WAP to print last vowel from char[]
+
+// 
+class  lastVowell
+	{
+	public static void main(String[] args) 
+	{
+		char[] ch = {'A', 'k', 'e', 'M', 'o', '#'};
+		System.out.println(lastVowels(ch));
+	}
+	
+	public static char lastVowels(char ch [])
+	{
+		for (int i = ch.length -1;i>= 0 ;i--)
+		{
+			if (ch[i] = 'A' || ch[i] = 'E' || ch[i] = 'I' || 
+				ch[i] = 'O' || ch[i] = 'U' || ch[i] = 'a' ||
+				ch[i] = 'e' || ch[i] = 'i' || ch[i] = 'o' ||
+				ch[i] = 'u' )
+			{
+				return ch[i]; 
+			}
+		}
+		return '\0';
+	}
+}

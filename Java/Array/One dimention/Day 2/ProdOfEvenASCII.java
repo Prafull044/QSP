@@ -1,0 +1,30 @@
+// 25.WAP to print product of even Ascii value character
+
+class ProdOfEvenASCII
+{
+	public static void main(String[] args) 
+	{
+	   
+	   char[] ch = {'A', 'C', 'E'};
+        System.out.print(ProdAscii(ch));
+
+	}
+	
+	public static int ProdAscii(char ch[])
+	{
+		int prod = 1;
+		for (int i = 0;i<ch.length ;i++ )
+		{
+			if (ch[i] % 2 == 0)
+			{
+			
+	            prod *= ch[i];
+				
+		    }
+		}
+	
+		return prod;
+		
+	}
+	
+}

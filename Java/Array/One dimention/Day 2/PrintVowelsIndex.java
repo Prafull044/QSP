@@ -1,0 +1,25 @@
+// 11.WAP to print vowel character index from char[]
+
+class PrintVowelsIndex
+{
+    public static void main(String[] args)
+    {
+        char[] ch = {'A', 'b', '@', 'E', 'm', '#', 'u', 'P', '7'};
+
+        printVowelsIndex(ch);
+    }
+
+    public static void printVowelsIndex(char[] c)
+    {
+        for (int i = 0; i < c.length; i++)
+        {
+            if (c[i] == 'A' || c[i] == 'E' || c[i] == 'I' ||
+                c[i] == 'O' || c[i] == 'U' || c[i] == 'a' ||
+                c[i] == 'e' || c[i] == 'i' || c[i] == 'o' ||
+                c[i] == 'u')
+            {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}

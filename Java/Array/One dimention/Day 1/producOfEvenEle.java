@@ -1,4 +1,4 @@
-// 16)WAP to print product of Odd elements
+// 16)WAP to print product of even elements
 class producOfEvenEle
 {
 	public static void main(String[] args) 
@@ -13,7 +13,7 @@ class producOfEvenEle
 		
 		for (int i =0;i<num.length ; i++ )
 		{
-			if (i % 2 != 0)
+			if (num[i] % 2 == 0)
 			{
 				prod *= num[i];
 			}

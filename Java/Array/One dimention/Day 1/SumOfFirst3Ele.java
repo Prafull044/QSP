@@ -1,5 +1,5 @@
 // 5.WAP to print sum of first 3 elements`
-// WAP to print sum of last 3 elements
+// .WAP to print sum of last 3 elements`
 
 class  SumOfFirst3Ele
 {

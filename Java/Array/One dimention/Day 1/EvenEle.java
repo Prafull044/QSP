@@ -1,4 +1,4 @@
-// print even elements
+//19  print even elements
 class EvenEle
 {
 	public static void main(String[] args) 
@@ -11,7 +11,7 @@ class EvenEle
 	{
 		for (int i = 0;i< num.length ; i++)
 		{
-			if (i % 2 == 0)
+			if (num[i] % 2 == 0)
 			{
 				System.out.println(num[i]);
 			}

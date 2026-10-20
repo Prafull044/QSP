@@ -1,0 +1,24 @@
+// 36.WAP to print last uppercase from char[]
+
+class LastUpper
+{
+    public static void main(String[] args)
+    {
+      char[] ch = {'A', 'b', 'M', '7', 'P', 'e'};
+
+        System.out.println(lastCon(ch));
+    }
+
+    public static char lastCon(char[] ch)
+    {
+        for (int i = ch.length - 1; i >= 0; i--)
+        {
+                if (ch[i] >= 'A' && ch[i] <= 'Z')
+                {
+                    return ch[i];
+                }
+            
+        }
+        return '\0';
+    }
+}

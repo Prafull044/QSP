@@ -1,0 +1,26 @@
+// 12.WAP to print consonants character index from char[]
+
+class PrintConIndex
+{
+    public static void main(String[] args)
+    {
+        char[] ch = {'A', 'b', '@', 'E', 'm', '#', 'u', 'P', '7'};
+
+        printConsoIndex(ch);
+    }
+
+    public static void  printConsoIndex(char[] c)
+    {
+        for (int i = 0; i < c.length; i++)
+        {
+            if (!(c[i] == 'A' || c[i] == 'E' || c[i] == 'I' ||
+                c[i] == 'O' || c[i] == 'U' || c[i] == 'a' ||
+                c[i] == 'e' || c[i] == 'i' || c[i] == 'o' ||
+                c[i] == 'u') && ( c[i] >= 'A' && c[i] <= 'Z' ||
+				c[i] >= 'a' && c[i] <= 'z') )
+            {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}

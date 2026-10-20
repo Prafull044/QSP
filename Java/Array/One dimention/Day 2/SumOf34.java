@@ -1,0 +1,26 @@
+
+// 41)WAP to sum of value which are divisible by 3 or 4 from integer array
+
+class SumOf34 
+{
+	public static void main(String[] args) 
+	{
+		
+		int [] arr = {12,45,66,88,766,56,77,99};
+		print(arr);
+	}
+	
+	public static void print(int [] arr)
+	{
+		int sum = 0;
+		for (int i =0;i<arr.length ;i++ )
+		{
+			if (arr[i] % 3 == 0 && arr[i] % 4 == 0)
+			{
+			 sum += arr[i];	
+			}
+		}
+		System.out.println(sum);
+	}
+	
+}
