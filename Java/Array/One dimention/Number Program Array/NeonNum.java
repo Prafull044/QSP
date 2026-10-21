@@ -1,0 +1,32 @@
+class NeonNum {
+    static int count = 0;
+
+    public static void main(String[] args) {
+        int[] arr = {12, 34, 55, 33, 9, 59, 39, 29, 18};
+
+        index(arr);
+        System.out.println("Count: " + count);
+    }
+
+    public static void index(int[] num) {
+        for (int i = 0; i < num.length; i++) {
+            if (neonNum(num[i])) {
+                count++;
+                System.out.println(num[i]);
+            }
+        }
+    }
+
+    public static boolean neonNum(int num) {
+        int sum = 0;
+		int n = num;
+		int sqr = num * num ;
+
+        while (sqr != 0) {
+             sum += sqr % 10;
+            sqr /= 10;
+        }
+
+        return  sum == n ;
+    }
+}

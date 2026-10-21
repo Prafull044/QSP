@@ -1,0 +1,63 @@
+class TwistedPrimeNum {
+    static int count = 0;
+
+    public static void main(String[] args) {
+        int[] arr = {12, 34, 55, 33, 31, 59, 39, 29, 18};
+
+        index(arr);
+        System.out.println("Count: " + count);
+    }
+
+    public static void index(int[] num) {
+        for (int i = 0; i < num.length; i++) {
+            if (isTwistedNum(num[i])) {
+                count++;
+                System.out.println(num[i]);
+            }
+        }
+    }
+
+    public static boolean isTwistedNum(int num) {
+        if (primeNum(num))
+        {	
+			int rev = reverse(num);
+			if (primeNum(rev))
+			{
+				return true;
+			}
+			return false;
+        }
+		return false;
+     }
+  
+	
+	public static boolean primeNum(int num)
+	{
+		if (num <= 1)
+		{
+			return false;
+		}
+		else{
+		     for (int i = 2;i<= num/2 ;i++ )
+		     {
+		     	if (num % i == 0)
+		     	{
+		     		return false;
+		     	}
+		     }
+		    }
+		return true;		
+	}
+	
+	public static int reverse(int num)
+	{
+		int rev = 0;
+		while (num != 0)
+		{
+			rev = rev * 10 + (num%10);
+			num/=10;
+		}
+		return rev;
+	}
+	
+}

@@ -1,0 +1,41 @@
+class StrongNum {
+    static int count = 0;
+
+    public static void main(String[] args) {
+        int[] arr = {12, 34, 55, 33, 31, 59, 39, 29, 18};
+
+        index(arr);
+        System.out.println("Count: " + count);
+    }
+
+    public static void index(int[] num) {
+        for (int i = 0; i < num.length; i++) {
+            if (strongNum(num[i])) {
+                count++;
+                System.out.println(num[i]);
+            }
+        }
+    }
+
+    public static boolean strongNum(int num) {
+        int n = num;
+        int sum = 0;
+
+        while (num != 0) {
+            sum = sum + factorial(num%10);
+            num = num / 10;
+        }
+
+        return sum == n;
+    }
+	
+	public static int factorial(int num)
+	{
+		int fact = 1;
+		for (int i =1;i <= num;i++ )
+		{
+			fact = fact * i;
+		}
+		return fact;
+	} 
+}

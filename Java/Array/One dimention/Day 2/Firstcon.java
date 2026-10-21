@@ -4,7 +4,7 @@ class Firstcon
 {
 	public static void main(String[] args) 
 	{
-		char[] ch = {'@', '3', 'A', 'k', 'e', 'M'};;
+		char[] ch = {'@', '3', 'A', 'k', 'e', 'M'};
 		System.out.println(firstVowel(ch));
 	}
 	

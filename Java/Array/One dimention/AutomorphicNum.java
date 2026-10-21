@@ -1,0 +1,46 @@
+class AutomorphicNum {
+    static int count = 0;
+
+    public static void main(String[] args) {
+        int[] arr = {12, 25, 55, 33, 31, 59, 39, 29, 18};
+
+        index(arr);
+        System.out.println("Count: " + count);
+    }
+
+    public static void index(int[] num) {
+        for (int i = 0; i < num.length; i++) {
+            if (isAutoNum(num[i])) {
+                count++;
+                System.out.println(num[i]);
+            }
+        }
+    }
+
+    public static boolean isAutoNum(int num) {
+        int n = num ;
+        int sqr = num * num ;
+		
+		int ct = count(num);
+		return sqr % ct == num;
+ 
+    }
+	
+	
+		public static int count(int num)
+	      {
+		      int ct = 0;
+		      while (num != 0)
+		      {
+		      	ct++;
+                num /= 10;
+		      }
+		      
+			  int cot= 1;
+			  for (int i = 1;i<= ct ;i++ )
+			  {
+				  cot = cot * 10;
+			  }
+			  return cot;
+	     }
+}

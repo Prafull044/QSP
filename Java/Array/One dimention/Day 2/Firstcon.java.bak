@@ -1,4 +1,5 @@
 // 28.WAP to print first consonant in char[]
+
 class Firstcon
 {
 	public static void main(String[] args) 
