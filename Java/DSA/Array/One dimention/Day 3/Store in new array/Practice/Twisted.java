@@ -1,0 +1,59 @@
+class  Twisted
+{
+public static void main(String[] args) 
+	{
+		int [] arr = {12,33,44,55,145,153,8,3,25,4, 2025};
+		check(arr);
+	}
+	
+	public static void check(int [] arr)
+	{
+		for (int i = 0;i<arr.length ;i++ )
+		{
+		    if(isTwisted(arr[i]))
+		    {
+		    	System.out.println(arr[i]);
+		    }
+		}
+	}
+	
+	public static boolean isTwisted(int num)
+	{
+		if (isPrime(num))
+		{
+			int rev = reverse(num);
+			if (isPrime(rev))
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+	
+	public static boolean isPrime(int num)
+		{
+			if (num <= 1) return false;
+			
+			for (int i = 2;i<= num/2  ;i++ )
+			{
+				if (num % i == 0)
+				{
+					return false;
+				}
+			}
+			return true;
+		}
+		
+	public static int reverse(int num)
+	{
+		int rev = 0;
+		while (num != 0)
+		{
+			rev = rev * 10 + (num %10);
+			num /= 10;
+		}
+		return rev;
+	}
+	
+}

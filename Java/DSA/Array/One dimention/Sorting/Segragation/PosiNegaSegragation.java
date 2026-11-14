@@ -1,0 +1,31 @@
+//1] Segregate Even and Odd Numbers
+//2) Segregate Positive and Negative Numbers
+import java.util.Arrays;
+class PosiNegaSegragation 
+{
+	public static void main(String[] args) 
+	{
+		int [] arr = {12,34,55,-33,22,4532,433,0, -3242};
+		posiNegaSeg(arr);
+		System.out.println(Arrays.toString(arr));
+	}
+	
+	public static void posiNegaSeg(int [] num)
+	{
+	   int i = 0;
+	   int j = num.length - 1;
+	   while(i < j)
+		{
+			if(num[i] > 0)
+			{
+				i++;
+			}else if(num[j] < 0){
+				j--;
+			}else{
+				int temp = num[i];
+				num[i] = num[j];
+				num[j] = temp;
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+class  Ugly
+{
+	public static void main(String[] args) 
+	{
+		int [] arr = {12,33,44,55,145,153,333,3222233,908};
+		check(arr);
+	}
+	
+	public static void check(int [] arr)
+	{
+		if(isUgly(arr[i]))
+		{
+			System.out.println(arr[i]);
+		}
+	}
+	
+	
+	public static boolean isUgly(int num)
+	{
+		while (num % 2 == 0)
+		{
+			num /= 2;
+		}
+		while (num % 3 == 0)
+		{
+			num /= 3;
+		}
+		
+		while (num % 5 == 0)
+		{
+			num /= 5;
+		}
+		
+		return num == 1;
+	}
+}

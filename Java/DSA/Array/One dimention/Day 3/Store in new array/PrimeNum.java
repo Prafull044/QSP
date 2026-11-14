@@ -1,0 +1,56 @@
+
+class PrimeNum {
+    static int count = 0;
+
+    public static void main(String[] args) {
+        int[] arr = {12, 34, 55, 33, 7,2, 59, 39, 29, 18};
+
+        countNum(arr);
+        int[] prime = storePrimeNum(arr);
+
+        for (int i = 0; i < count; i++) {
+            System.out.println(prime[i]);
+        }
+
+        System.out.println("Count: " + count);
+    }
+
+    public static void countNum(int[] num) {
+        for (int i = 0; i < num.length; i++) {
+            if (primeNum(num[i])) {
+                count++;
+            }
+        }
+    }
+
+    public static int[] storePrimeNum(int[] nums) {
+        int[] prime = new int[count];
+        int index = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (primeNum(nums[i])) {
+                prime[index] = nums[i];
+                index++;
+            }
+        }
+
+        return prime;
+    }
+
+    public static boolean primeNum(int num) {
+        if (num ==  1)
+        {
+			return false;
+        }else{
+
+             for (int i = 2;i< num/2 ; i++)
+             {
+				 if (num % i == 0)
+				 {
+					 return false;
+				 }
+             }
+		}
+        return true;
+    }
+}

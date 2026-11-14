@@ -1,0 +1,43 @@
+class DisariumNum
+{
+	public static void main(String[] args) 
+	{
+		int num = 598;
+		if(isDasarium(num , num, 0))
+		{
+			System.out.println("Dasarium num");
+	    }else{
+			System.out.println("not disarium num");
+		}
+    }
+	
+	static int count = 3;
+	
+	public static boolean isDasarium(int num , int orignal ,int sum)
+	{
+		 if(num == 0)
+		{
+			return sum == orignal;
+
+		}else{
+			sum += power((num%10),1, count);
+			    num /=10;
+				count--;
+		}
+	  return isDasarium(num,orignal, sum);
+	}
+
+   public static int power(int num ,int sum, int ct)
+	{
+		if(ct == 0)
+		{
+			return sum;
+		}else{
+			sum = sum * num;
+			ct--;
+			
+		}
+		
+		return power(num , sum, ct);
+	}
+}

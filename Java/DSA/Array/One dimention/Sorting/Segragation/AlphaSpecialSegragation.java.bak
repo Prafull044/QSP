@@ -1,0 +1,34 @@
+// Segregate Letters and Special Characters
+
+import java.util.Arrays;
+class AlphaSpecialSegragation 
+{
+	public static void main(String[] args) 
+	{
+		char [] arr = {'a','e','0','4','t','0', '7','3'};
+		upperLower(arr);
+		System.out.println(Arrays.toString(arr));
+	}
+	
+	public static void upperLower(char [] cha)
+	{
+	   int i = 0;
+	   int j = cha.length - 1;
+	   while(i < j)
+		{
+			if((cha[i]  >= 'A' && cha[i] <= 'Z') ||( cha[i] >= 'a' && cha[i] <= 'z'))
+			{
+				i++;
+			}else if(!((cha[j]  >= 'A' && cha[j] <= 'Z') ||( cha[j] >= 'a' && cha[j] <= 'z') ||
+				    (cha[j] >= '0' && cha[j] <= '9'))){
+				j--;
+			}else{
+				char temp = cha[i];
+				cha[i] = cha[j];
+				cha[j] = temp;
+			}
+		}
+	}
+}
+
+
