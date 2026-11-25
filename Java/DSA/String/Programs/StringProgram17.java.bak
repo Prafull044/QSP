@@ -1,0 +1,15 @@
+// WAP to count length of String without using length()
+class StringProgram17
+{
+	public static void main(String[] args) 
+	{
+		int count = 0;
+		String str  = "Prafull";
+		
+		for(char ch : str.toCharArray())
+		{
+			count++;
+		}
+		System.out.println(count);
+	}
+}

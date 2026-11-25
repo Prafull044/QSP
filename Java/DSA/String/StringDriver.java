@@ -1,0 +1,432 @@
+
+
+import java.util.Arrays;
+
+class CustomString {
+
+    private char[] value;
+
+    // Default constructor
+    public CustomString() {
+        value = new char[0];
+    }
+
+    // Constructor using String
+    public CustomString(String str) {
+        value = new char[str.length()];
+
+        for (int i = 0; i < str.length(); i++) {
+            value[i] = str.charAt(i);
+        }
+    }
+
+    // Constructor using character array
+    public CustomString(char[] ch) {
+        value = new char[ch.length];
+
+        for (int i = 0; i < ch.length; i++) {
+            value[i] = ch[i];
+        }
+    }
+	
+	public CustomString(StringBuffer buffer)
+	{
+		value = new char[buffer.length()];
+		 
+		 for(int i = 0; i<buffer.length() ; i++)
+		{
+			value[i] = buffer.charAt(i);
+		}
+	}
+	
+	
+	public CustomString(StringBuilder builder)
+	{
+		value = new char[builder.length()];
+		
+		for(int i = 0; i<builder.length() ; i++)
+		{
+			value[i] = builder.charAt(i);
+		}
+	}
+
+    // Returns length
+    public int length() {
+        return value.length;
+    }
+
+    // Returns character at specified index
+    public char charAt(int index) {
+
+        if (index < 0 || index >= value.length) {
+            throw new StringIndexOutOfBoundsException();
+        }
+
+        return value[index];
+    }
+
+    // Converts into character array
+    public char[] toCharArray() {
+        return value;
+    }
+
+    // Checks whether string is empty
+    public boolean isEmpty() {
+        return value.length == 0;
+    }
+
+    // Converts CustomString into String
+    @Override
+    public String toString() {
+
+        if (isEmpty()) {
+            return "";
+        }
+
+        return new String(value);
+    }
+	
+	// firstIndexOf
+	public int indexOf(int ch , int fromStart)
+	{
+		for(int i = fromStart; i <value.length ; i++ )
+		{
+			if(value[i] == ch)
+			{
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	
+	public int indexOf(int ch)
+	{
+		return indexOf(ch,0);
+	}
+	
+	// lastINdexOf
+	public int lastIndexOf(int ch , int lastIndex)
+	{
+		for(int i = lastIndex; i>=0 ;i--)
+		{
+			if(value[i] == ch)
+			{
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	public int lastIndexOf(char ch)
+	{
+		return lastIndexOf(ch ,value.length-1);
+	}
+	
+	// check the string are present inside the current string 
+	public boolean contains(String str)
+	{
+		for(int i = 0; i<value.length ; i++)
+		{
+			int count = 0;
+			for(int j = 0 ; j<str.length() && (i+j)<value.length ;j++)
+			{
+				if(value[j+i] == str.charAt(j) )
+				{
+					count++;
+				}else{
+					break;
+				}
+				
+			}
+			if(count == str.length())
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	
+	
+	// replace
+	
+	public String replace(char oldChar , char newChar)
+	{
+		char [] modify = new char[value.length];
+		
+		for(int i = 0 ; i<value.length ; i++)
+		{
+			if(value[i] == oldChar)
+			{
+				modify[i] = newChar;
+			}else{
+				modify[i] = value[i];
+			}
+		}
+		return new String(modify);
+	}
+		
+		// concate 
+		
+	public String concat(String str)
+		{
+		// 	if(str.isEmpty()){
+		//		return this
+		
+		char [] res = new char[value.length + str.length()];
+		
+		int index = 0;
+		for(int i= 0; i<value.length ; i++)
+			{
+				res[index++] = value[i];
+			}
+			
+		for(int i = 0; i<str.length() ; i++)
+			{
+				res[index++] = str.charAt(i);
+			}
+		return new String(res);
+	}
+	
+	
+	// toUpperCase
+	public String toUpperCase()
+	{
+	char [] res = new char[value.length];
+		
+	for(int i = 0; i<value.length ; i++)
+		{
+			if(value[i] >='a' && value[i] <= 'z')
+			{
+				res[i] = (char) (value[i] - 32);
+			}else
+			{
+				res[i] = value[i];
+			}
+		}
+		return new String(res);
+	}
+	
+	
+	// toLowerCase
+	public String toLowerCase()
+	{
+	char [] res = new char[value.length];
+		
+	for(int i = 0; i<value.length ; i++)
+		{
+			  if(value[i] >='A' && value[i] <= 'Z')
+			{
+				res[i] = (char) (value[i] + 32);
+			}else
+			{
+				res[i] = value[i];
+			}
+		}
+		return new String(res);
+	}
+	
+	// equals method 
+	
+public boolean equals(Object obj)
+{
+    if(obj == null)
+    {
+        return false;
+    }
+
+
+    CustomString str = (CustomString) obj;
+
+    if(value.length != str.value.length)
+    {
+        return false;
+    }
+
+    for(int i = 0; i < value.length; i++)
+    {
+        if(value[i] != str.charAt(i))
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+	
+	// equalsIngnoreCase
+	public boolean equalsIgnoreCase(String obj)
+      {
+    if(obj == null) return false;
+
+    if(value.length != obj.length()) return false;
+
+    for(int i = 0; i < obj.length(); i++)
+    {
+        char ch1 = value[i];
+        char ch2 = obj.charAt(i);
+
+        if(ch1 >= 'a' && ch1 <= 'z')
+        {
+            ch1 = (char)(ch1 - 32);
+        }
+
+        if(ch2 >= 'a' && ch2 <= 'z')
+        {
+            ch2 = (char)(ch2 - 32);
+        }
+
+        if(ch1 != ch2)
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+	
+	
+	
+}
+	
+	
+	// subString
+	public String substring(int beginIndex) {
+		if (beginIndex < 0 || beginIndex >= value.length) {
+			throw new StringIndexOutOfBoundsException();
+		}
+
+		char[] res = new char[value.length - beginIndex];
+		int index = 0;
+		for (int i = beginIndex; i < value.length; i++) {
+			res[index++] = value[i];
+		}
+		return new CustomString(res);
+	}
+	
+	// substring
+	public CustomString substring(int beginIndex, int endIndex) {
+		if (beginIndex < 0 || beginIndex >= value.length) {
+			throw new StringIndexOutOfBoundsException();
+		}
+		char[] res = new char[endIndex - beginIndex];
+		int index = 0;
+		for (int i = beginIndex; i < endIndex; i++) {
+			res[index++] = value[i];
+
+		}
+
+		return new CustomString(res);
+	}
+	
+}
+
+public class StringDriver {
+
+    public static void main(String[] args) {
+
+        // Combination 1: Default constructor
+
+        String str1 = new String();
+        System.out.println(str1.length());
+
+        CustomString cstr1 = new CustomString();
+        System.out.println(cstr1.length());
+
+
+        // Combination 2: charAt() method
+
+        String s = new String("java");
+        char ch = s.charAt(1);
+        System.out.println(ch);
+
+        CustomString cs = new CustomString("hi");
+        char ch1 = cs.charAt(1);
+        System.out.println(ch1);
+
+
+        // Combination 3: toCharArray() method
+
+        String s1 = new String("morning");
+        char[] ch2 = s1.toCharArray();
+
+        System.out.println(Arrays.toString(ch2));
+
+        CustomString cs1 = new CustomString("morning");
+        char[] cs2 = cs1.toCharArray();
+
+        System.out.println(Arrays.toString(cs2));
+
+
+        // Combination 4: Character array constructor
+
+        char[] ch3 = {'j', 'a', 'v', 'a', 'i', 's'};
+
+        String str = new String(ch3);
+        System.out.println(str);
+
+        CustomString cs3 = new CustomString(ch3);
+        System.out.println(cs3.length());
+
+
+        // Combination 5: isEmpty() method
+
+        String s2 = new String();
+        System.out.println(s2.length());
+        System.out.println(s2.isEmpty());
+
+        CustomString cs4 = new CustomString("java");
+        System.out.println(cs4.length());
+        System.out.println(cs4.isEmpty());
+
+
+        // Combination 6: toString() method
+
+        CustomString cs5 = new CustomString("Hello Java");
+        System.out.println(cs5.toString());
+
+        CustomString cs6 = new CustomString();
+        System.out.println(cs6.toString());
+		
+		CustomString cs7 = new CustomString("Hello Java");
+        System.out.println(cs7.indexOf('l',2));
+		
+		CustomString cs8 = new CustomString("Hello Java");
+        System.out.println(cs8.indexOf('l'));
+		
+		CustomString cs9 = new CustomString("Hello Java");
+        System.out.println(cs9.lastIndexOf('l',5));
+		
+		CustomString cs10 = new CustomString("Hello Java");
+        System.out.println(cs10.lastIndexOf('l',5));
+		
+		
+		// contains 
+		CustomString cs11 = new CustomString("Hello Java");
+        System.out.println(cs11.contains("va"));
+		
+		
+		CustomString cs12 = new CustomString("Prafull");
+		System.out.println(cs12.replace('f' , 'p'));
+		
+		CustomString cs13 = new CustomString("Prafull");
+		System.out.println(cs13.concat("Dokrimare"));
+		
+		CustomString cs14 = new CustomString("Prafull");
+		System.out.println(cs14.toUpperCase());
+	
+	    CustomString cs15 = new CustomString("Prafull");
+		System.out.println(cs15.toLowerCase());
+		
+		
+	    CustomString cs16 = new CustomString("Prafull");
+		System.out.println(cs16.equals("prafull"));
+		
+		
+	    CustomString cs17 = new CustomString("Prafull");
+		System.out.println(cs17.equalsIgnoreCase("prafull"));
+	      
+    }
+}

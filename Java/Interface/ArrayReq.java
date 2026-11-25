@@ -1,0 +1,27 @@
+
+public interface ArrayReq
+{
+    boolean palindromeArray(int[] ar);
+
+    int binarySearch(int[] ar, int key);
+
+    void mergeSort(int[] nums);
+
+    int[] halfReverseArrayAfterSorting(int[] ar);
+
+    static void bubbleSort(int[] ar)
+    {
+        for(int i = 0; i < ar.length - 1; i++)
+        {
+            for(int j = 0; j < ar.length - 1 - i; j++)
+            {
+                if(ar[j] > ar[j + 1])
+                {
+                    int temp = ar[j];
+                    ar[j] = ar[j + 1];
+                    ar[j + 1] = temp;
+                }
+            }
+        }
+    }
+}

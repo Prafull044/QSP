@@ -1,0 +1,17 @@
+// WAP to check String is Starting with vowel or not
+class StringProgram3
+{
+	public static void main(String[] args) 
+	{
+		String str = "prafull";
+ 
+			char ch = str.charAt(0);
+			if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+			{
+			   System.out.println("true");
+				return;	
+			}else{
+			 System.out.println("false");
+			}
+	}
+}

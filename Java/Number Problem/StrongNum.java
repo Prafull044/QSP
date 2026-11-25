@@ -1,0 +1,30 @@
+class StrongNum 
+{
+	public static void main(String[] args) 
+	{
+		int num = 145;
+		System.out.println(isStrong(num ,num, 0));
+	}
+	
+	public static boolean isStrong(int num ,int temp, int sum)
+	{
+		if(num == 0)
+		{
+			return temp == sum;
+		}else{
+			sum += factorial(num%10);
+			num /= 10;
+		}
+		return isStrong(num,temp,sum);
+	}
+	
+	
+	public static int factorial(int num)
+	{
+		if(num == 0)
+		{
+			return 1;
+		}
+		return num * factorial(num-1);
+	}
+}

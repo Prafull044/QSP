@@ -1,0 +1,134 @@
+
+class arraysReq implements ArrayReq
+{
+    // Check whether all elements are palindrome numbers
+    public boolean palindromeArray(int[] ar)
+    {
+        for(int i = 0; i < ar.length; i++)
+        {
+            if(!isPalindrom(ar[i]))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean isPalindrom(int num)
+    {
+        int rev = 0;
+        int num2 = num;
+
+        while(num != 0)
+        {
+            rev = rev * 10 + (num % 10);
+            num /= 10;
+        }
+
+        return rev == num2;
+    }
+
+    // Binary Search (array must be sorted)
+    public int binarySearch(int[] num, int target)
+    {
+        int i = 0;
+        int j = num.length - 1;
+
+        while(i <= j)
+        {
+            int mid = i + (j - i) / 2;
+
+            if(num[mid] == target)
+            {
+                return mid;
+            }
+            else if(target > num[mid])
+            {
+                i = mid + 1;
+            }
+            else
+            {
+                j = mid - 1;
+            }
+        }
+
+        return -1;
+    }
+
+    // Merge Sort
+    public void mergeSort(int[] nums)
+    {
+        if(nums.length <= 1)
+        {
+            return;
+        }
+
+        int[] left = new int[nums.length / 2];
+        int[] right = new int[nums.length - left.length];
+
+        for(int i = 0; i < left.length; i++)
+        {
+            left[i] = nums[i];
+        }
+
+        for(int j = 0; j < right.length; j++)
+        {
+            right[j] = nums[j + left.length];
+        }
+
+        mergeSort(left);
+        mergeSort(right);
+
+        merge(left, right, nums);
+    }
+
+    private void merge(int[] left, int[] right, int[] nums)
+    {
+        int i = 0, j = 0, k = 0;
+
+        while(i < left.length && j < right.length)
+        {
+            if(left[i] < right[j])
+            {
+                nums[k++] = left[i++];
+            }
+            else
+            {
+                nums[k++] = right[j++];
+            }
+        }
+
+        while(i < left.length)
+        {
+            nums[k++] = left[i++];
+        }
+
+        while(j < right.length)
+        {
+            nums[k++] = right[j++];
+        }
+    }
+
+    // Sort first, then reverse the second half
+    public int[] halfReverseArrayAfterSorting(int[] ar)
+    {
+        mergeSort(ar);
+
+        int mid = ar.length / 2;
+
+        int i = 0;
+        int j = ar.length - 1;
+
+        while(i < j)
+        {
+            int temp = ar[i];
+            ar[i] = ar[j];
+            ar[j] = temp;
+
+            i++;
+            j--;
+        }
+
+        return ar;
+    }
+}

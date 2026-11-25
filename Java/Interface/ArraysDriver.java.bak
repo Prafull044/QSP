@@ -1,0 +1,17 @@
+class ArraysDriver {
+    public static void main(String[] args) {
+        ArrayReq obj = new arraysReq();
+
+        int[] arr = {11, 22, 33, 44, 444};
+
+        System.out.println(obj.palindromeArray(arr));
+
+        int[] nums = {10, 20, 30, 40, 50};
+        System.out.println(obj.binarySearch(nums, 30));
+
+        int[] a = {40, 10, 50, 20, 30};
+        obj.mergeSort(a);
+
+        System.out.println(java.util.Arrays.toString(a));
+    }
+}
